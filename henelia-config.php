@@ -41,8 +41,6 @@ if ( get_option('he-activate-config') )  {
 	include 'custom/henelia-config-custom-page.php';		// page de customisation du thème
 	include 'custom/henelia-config-custom-function.php';	// function associés à la création du thème
 
-	
-
 }
 
 
@@ -52,6 +50,12 @@ if ( get_option('he-tinymce') )  {
 
 	include 'tinymce/henelia-config-tinymce-page.php';		// page de customisation du tinyMCE
 	include 'tinymce/henelia-config-tinymce-function.php';		// function associés à la gestion tinyMCE
+
+}
+
+if ( get_option('he-cookie') )  {
+
+	include 'cookie/henelia-config-cookie-function.php';		// function associés à l'affichage en front du message de Cookie
 
 }
 

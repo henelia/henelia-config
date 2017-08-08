@@ -1,0 +1,68 @@
+/**
+*
+* Gestion du cookie
+*
+*/
+
+.js-alert-cookie {
+	font-size: 16px;
+	transition:none;
+	overflow: hidden;
+	text-align: center;
+	background-color: $text-color;
+	background-color: rgba(0,0,0,0.7);
+	color:#fff;
+	animation: cookie-anim 1s ease-in forwards;
+	padding: 10px;
+	margin: 0;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translate(0,100%);
+    z-index: 9999;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.js-alert-cookie.is-hidden{
+	animation: none;
+	transition: all 0.5s ease-out;
+	transform: translate(0,100%);
+}
+@keyframes cookie-anim {
+	0% { transform: translate(0,100%); }
+	100% { transform: translate(0,0); }
+}
+.alert-cookie--link, .alert-cookie--link:visited {
+	display: inline-block;
+	color: #fff;
+}
+.alert-cookie--link:hover, .alert-cookie--link:visited:hover, .alert-cookie--link:focus, .alert-cookie--link:visited:focus {
+	color: #e6e6e6;
+}
+
+.alert-cookie--btn {
+	border: 0;
+	background-color: #fff;
+	overflow: hidden;
+	font-size: 16px;
+	font-weight: 300;
+	padding: 10px;
+	line-height: 1;
+	transition: all 150ms ease-out;
+	cursor: pointer;
+	color: #000;
+}
+.alert-cookie--btn:hover, .alert-cookie--btn:focus {
+	background-color: #62ce00;
+	color: #fff;
+	outline: 0;
+	border: 0;
+}
+
+@media print {
+	.js-alert-cookie {
+		display: none!important;
+	}
+}

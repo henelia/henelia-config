@@ -22,6 +22,7 @@ add_action( 'admin_menu', 'he_create_admin_page' );
 function he_admin_page_settings() {
 	register_setting( 'he-admin-page-group', 'he-activate-config' );
 	register_setting( 'he-admin-page-group', 'he-tinymce' );
+	register_setting( 'he-admin-page-group', 'he-cookie' );
 }
 
 function he_admin_page(){
@@ -69,6 +70,16 @@ function he_admin_page(){
 									<li>Gestion des blocs, titrage, ...</li>
 									<li>Options variées</li>
 								</ul>
+							</div>
+						</label>
+					</div>
+
+					<div class="he-admin-page-modules-item">
+						<input id="he-cookie" name="he-cookie" type="checkbox" value="1" <?= checked( get_option('he-cookie'), 1, false );?>/>
+						<label for="he-cookie">
+							<div>
+								<h3>Activation des cookie</h3>
+								<p>Ne pas activer sur les nouveaux sites, le dev est actif dans le thème. N'activer que sur les anciens sites.</p>
 							</div>
 						</label>
 					</div>
