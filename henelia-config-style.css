@@ -1,0 +1,176 @@
+/**
+*
+* Style spécifique au plugin
+* 
+* - Page config
+* - Adminbar
+* - Custom admin
+*
+*
+**/
+
+/*===================================
+=            Page config            =
+===================================*/
+
+/*----------  Chartage de la page Racine  ----------*/
+
+/* Affichage des options/checkbox/plugins activable */
+.he-config-home-modules {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+    justify-content: space-around;
+	width: 100%;
+}
+.he-admin-page-modules-item {
+    width: 32%;
+    padding: 10px;
+	background-color: #fff;
+	border: 5px solid #e5e5e5;
+	position: relative;
+}
+.he-admin-page-modules-item input {
+	display: none;
+}
+.he-admin-page-modules-item label:before{
+	content: "";
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 34px;
+	height: 34px;
+	background-color: #f00;
+}
+.he-admin-page-modules-item label:after{
+	content: "";
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 34px;
+	height: 34px;
+	background-size: 100%;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6REUxN0NDRkVBOTdGMTFFNEI2NTQ5NzFFODU1NTNEMDkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6REUxN0NDRkRBOTdGMTFFNEI2NTQ5NzFFODU1NTNEMDkiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyRTU2RUY0RjI3NzcxMUU0QjM0MEUwREQzNEUzQzE1RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyRTU2RUY1MDI3NzcxMUU0QjM0MEUwREQzNEUzQzE1RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrpT1QUAAAErSURBVHja7NjLDoIwEAVQcM3je0z0rw0aliLiV1nbWONEeXSmt5XETnIXpEAPUKCQK6WyNdcmW3kl4N8CdzqNThHBYPo46GxHW81dPJJWPeusU0ysg4jZd2f7asbWmdqw1rkGRlJcr1NxgKGRTrglYChk6YpzAaKRLJwrEIWkuIsLjgP0RYpwXKAUKcZJgFykF04KdEWWFiXG+QCXkBCcL3AK+YkrffpAvBUo0jzbBhQOBXwhb+pdAwJngpoP3s3EaGZZXoCjrMiYG8iZhLy7kbjOXtbajkUIEo2jY7InbUVs4BwOigyFgyFD4iBIH1zBfE6KkByc73gSIWPhxMiYOBEyNo6NdMGF+nB3Qv761wdFnjjAvc4xMI4iW9vnV3uefgEnYALO10OAAQBnOK2RuM6bFQAAAABJRU5ErkJggg==');	
+}
+.he-admin-page-modules-item input:checked + label:before {
+	background-color: #00dc11;
+}
+.he-admin-page-modules-item input:checked + label:after {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MkU1NkVGNEYyNzc3MTFFNEIzNDBFMEREMzRFM0MxNUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MkU1NkVGNTAyNzc3MTFFNEIzNDBFMEREMzRFM0MxNUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyRTU2RUY0RDI3NzcxMUU0QjM0MEUwREQzNEUzQzE1RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyRTU2RUY0RTI3NzcxMUU0QjM0MEUwREQzNEUzQzE1RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prc31AAAAALRSURBVHja7JpNSFVBFMefoT7lLYUkP5KWEYFW9qFto0UE7UqwD6ikpZLUwrAPdy1a1kIMimrzKCKDjMIwSLMgg2jTh5sQJCMwyVCi53/gLw0P8d15d+bemesM/GCezjl3/u+dOe/cc19JLpdLraWxLrXGhhfsBXvBXrAX7AV7wV6wjrEBXAMtqy0qTZDgk6ALVIHRpH/Ch0Ef55nVFpYk4OZhL3gO0uALaAXfkyq4Hozz/M5R7IekJq1KcJ9ixThWSKzrgvtBM+fnwMNAViKkHeRy7v+4rmLr4hkWoXuL82GwH/wNauya4N3gBagAk3w9o+LAJcG14DWoA7/5dfQ+qaWlyMhZihWf0JFixLok+DbYw/lZ8LhoTw5k5CtSRu4P68/2M9wG7nH+EuwDi2Ec2ixYFBUjPL9fmaSmwzq1VXADeMXMPMsa+WNSGwAZ1si1zMhHdYlVEbwZlEUkeABs5/w8GNTqPUBm62SGzEaQkXuljHzTxDWCLOqRNnHcoNg26TrPQFlcgtNgnBv5ATYa2EgLWOA1PoMqU29s0IWNYJEbeqp5E/Vgir5/ga0mj43K4otSyHVo2kClFD1iHDKdJ1QWl4N33NhP0KBhA3cksd1RlKqqBjul0B4MefE+SeyNqGrzYowuaMja7ZKPYVMZWZfgUvBGCu1Niva7wB/aT4L1Ud59FWvYJH2NDCnY1YBvtJujn5QLgvOz9ukA6zNgjOv/gQNx3F+HMRZZe0IK7UIFSVZ6g7riaiiEdbBDOo+PoupaxCk4v9Y+UaBGHmFkOC1YZO23FDSbl7WbwTz/9wlUx90j0+Vom1SQPFmhRhZvxBYbmoKmnvd0MnyXx0FbuqA6e1ppPhlozPu76FpctaV/pLuJ1wTGKH65XXPKpoaZ7ibeBLjE+RA4Y1uH0MSveO6CGvBA5TGmqyFt/fC/xPOCvWAv2Av2gr1gLziysSTAAIBzERFxFRXgAAAAAElFTkSuQmCC');
+}
+		
+.he-admin-page-modules-item ul {
+    padding-left: 20px;
+    list-style: square;
+    font-size: 12px;
+}
+
+.he-config-home-form .submit {
+	text-align: center;
+}
+
+/* Bouton validation de formulaire */
+
+.he-config-home-form .button {
+    font-size: 18px;
+    padding-left: 30px;
+    height: 50px;
+    padding-right: 30px;
+}
+
+.he-config-home-form .button:before {
+	content:"";
+	display: inline-block;
+	vertical-align: middle;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAyCAYAAAAqRkmtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+pJREFUeNrMWYuR2yAQtTNXgNKBSqCDIx0oFRzpQNeBO1BSgZwKdB0oqUDuwO5A7oDAzG7mzRoQ+lhzzDBGSMBj/7s+HHZo1tredQXPxnU9Z48vG4AoXa9mLmtc14c9mwN5ct0ePntzGAtPVTGnBatP/A1xQE/sWS/gUjb7DTwPrnchGc3hgHt9db19BlCvHL4V9Kwmvlc5nEJCPI39ATkuQSzKxIV7fE9rx63ZX0feWZZLGp8AGMpyJVlORKinDi7EXCsXAaUqAlFOXEjDmtH1ZhV7SaA7MdfxxnCoZQ0NXAzZXcjL0xzP2yTlEkAr0FRpfhS8q0GJSmCrl7UeWY8aT+uktyoJeBVTrBTghlhUCGoP0jvRBSz9aqndbEMJzMhg0a6SeFl5Xkh7O3HTAqhUAkULsfk1dnsGF7EWuJYpqqU1CG04woJCUGNk0IEDCxg3Yq0Fea7pvRJ7P3AuV0Ybab9o7uESAqBBBUNNJ5Aa2N6BrCvgXDEHqGYtlGEZsgsUrybZrTP3V/S9CliWYY2pasUhBtg2sIavcRhAILPGRXK/gt1kuTOzZevRGozAQX7WcwC2IEf8zHJqpOKsjGtLIV7qMEOORjZHrExgsO1mkc0MqpUpjUNjPidc26q9uO4B+gM9O+/u11Pw/Xg8/iRz8ceNfb+48REX01wo1iz8mkQs6olxoXNj7eL2uKeoa0R0U4PmN1NZJPl4O5GRogOINS0pihTyNzjD81d4/Yuo4Nub6zdP7Q246vf4G5i/hUyDDowL9NGBcbkRRU+5eb03rmyscaxozHIkx+bw2RvGo3tR9CUjW7x52SUX+duNz1Tp8PL8PQUo8kqRrLMMvrlvXwMa/z7lyjCiwUSsAf8e9cdAsVRrwR2HWp/D1l4AQrdWiURO78X6LHmMJHJqb62fAulDuIo8zTf3+xHzSs9sSaAE5gcY9tus8Cuvva7WegJ7JjbdPXD3+0Eav7ZdaB9NyiO909mdd1sb4dexaluujII9HnJ8/VSNsguVd1JAd/U6Eij4/kEkeb0s++wF0sjgWADtRcG25orcxgqWBzZQg+oF643I2zuodlSZ51ShCAzz+yXFskEAHQKVvhI5QsmaEdU8zclgzNhz4TY7FyN/bDLS5y6URxGgLlDN66Vng320yPHLHKDdFAvo8Cumz0tKm6Co1WLKzjj0f/rMdVJZyAUAGnKyNlQLXXLxpBhETJvCnF/U8DFhVIHLjosLGrIkHoljTaImoBPvKhGhnbaovKTKMTbnACyfJ9ivnlaByd2YZTlVbQmB3yrRMxvvqTdnPytA6A+FCSD7ulzJdvm/qNR6WR7Kbf8EGABUqeEQEeoQlQAAAABJRU5ErkJggg==');
+    width: 33px;
+    height: 40px;
+    margin-right: 10px;
+    padding-top: 3px;
+}
+
+/*=====  End of Page config  ======*/
+
+
+/*===============================================
+=            Affichage pages plugins            =
+===============================================*/
+
+.he-config_page_he-custom table.form-table, 
+.he-config_page_he-tinymce table.form-table
+{
+	background-color: #fff;
+	border: 10px solid #e1e5e8;
+	margin-top: 30px;
+}
+.he-config_page_he-custom .form-table tr, 
+.he-config_page_he-tinymce .form-table tr
+{
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.he-config_page_he-custom .form-table th, 
+.he-config_page_he-tinymce .form-table th
+{
+    padding-left: 20px;
+    vertical-align: middle;
+    width: 220px;
+}
+.he-config_page_he-custom .form-table td, 
+.he-config_page_he-tinymce .form-table td
+{
+	padding: 30px 10px;
+}
+
+.he-config_page_he-custom h2,
+.he-config_page_he-tinymce h2,
+.he-config_page_he-custom table.form-table + p.submit, 
+.he-config_page_he-tinymce table.form-table + p.submit 
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-top: 1px solid #8c8c8c;
+    padding-top: 30px;
+}
+
+.he-config_page_he-custom input[type="text"], 
+.he-config_page_he-tinymce input[type="text"]
+{
+	height: 35px;
+}
+
+/* Gestion des entêtes de formulaire (via js) */
+.js-he-form-heading {
+	border-bottom: 5px solid #e1e5e8;
+    background-color: #3fb2db;
+}
+.js-he-form-heading th {
+	font-size: 18px;
+}
+
+/* Gestion des sous-niveau de formulaire (via js) */
+.he-config_page_he-custom .js-he-form-sublevel th {
+    padding-left: 60px;
+}
+
+.js-he-form-sublevel label {
+	position: relative;
+}
+
+.js-he-form-sublevel label:before {
+	content: "---";
+	position: absolute;
+	top: 50%;
+	left: -40px;
+	transform: translateY(-50%);
+}
+
+.alert {
+	color: red;
+}
+/*=====  End of Affichage pages plugins  ======*/
+
+
+

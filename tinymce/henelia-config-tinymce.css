@@ -1,0 +1,50 @@
+/**
+*
+* * Styles du TinyMCE
+*
+*
+**/
+
+/*----------  WYSIWYG gallery preview  ----------*/
+
+.mce-visualblocks .wpview,
+.mce-visualblocks .gallery {
+	padding:0 !important;
+	margin:0 !important;
+}
+.mce-visualblocks .gallery {
+	border:none !important;
+	background-color: #ccc !important;
+	height:50px;
+	position: relative;
+}
+.mce-visualblocks .gallery:after {
+	content: "Gallerie d'images";
+	font-family: Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	position: absolute;
+	left:10px;
+	top:10px;
+}
+.mce-visualblocks .gallery * {
+	display:none;
+}
+
+
+/*----------  WYSIWYG ancre  ----------*/
+
+#tinymce h2[id]:before,
+#tinymce h3[id]:before,
+#tinymce ul[id]:before,
+#tinymce li[id]:before,
+#tinymce ol[id]:before,
+#tinymce blockquote[id]:before,
+#tinymce p[id]:before {
+	display:inline-block;
+	content:attr(id);
+	margin-right:5px;
+	padding: 0 5px;
+	background-color: #666;
+	color:#fff;
+}
