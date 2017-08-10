@@ -389,9 +389,10 @@ class He_Add_Admin_Page {
 		// si une valeur en bdd
 		if ( isset($datas['inBdd'][$id]) && '' != $datas['inBdd'][$id] ) {
 			$btnTxt = 'Modifier';
-			$value = $datas['inBdd'][$id];			
+			$value = $datas['inBdd'][$id];
+			$img = wp_get_attachment_image_src($value,'thumbnail');		
 			echo '<div class="he-media-preview">';
-			echo '<div class="he-media-preview-item" style="background-image:url('.wp_get_attachment_image_src($value,'thumbnail')[0].');"></div>';
+			echo '<div class="he-media-preview-item" style="background-image:url('. $img[0] .');"></div>';
 			echo '</div>';
 		}
 
@@ -427,10 +428,11 @@ class He_Add_Admin_Page {
 			$btnTxt = 'Modifier';
 			$value = $datas['inBdd'][$id];
 			$imgIds = explode(',', $value);
+			$imgIdsArray = wp_get_attachment_image_src($imgId,'thumbnail');
 			
 			echo '<div class="he-media-preview">';
 			foreach ($imgIds as $imgId) {
-				echo '<div class="he-media-preview-item" style="background-image:url('.wp_get_attachment_image_src($imgId,'thumbnail')[0].');"></div>';
+				echo '<div class="he-media-preview-item" style="background-image:url('. $imgIdsArray[0] .');"></div>';
 			}
 			echo '</div>';
 		}
