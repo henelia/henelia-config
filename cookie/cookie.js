@@ -7,7 +7,7 @@
  */
 
 function translate(lang_fr, lang_en, lang_es, lang_de) {
-    var lang = $('html').attr('lang');
+    var lang = jQuery('html').attr('lang');
     if (lang === "fr" || lang === "fr-FR" ) {
         return lang_fr;
     } else if (lang === "en" || lang === "en-EN" || lang === "en-US" ) {
