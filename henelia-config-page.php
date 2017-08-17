@@ -40,7 +40,7 @@ function he_admin_page(){
 			<fieldset>
 				<div class="he-config-home-modules">
 					<div class="he-admin-page-modules-item">
-						<input id="he-activate-config" name="he-activate-config" type="checkbox" value="1" <?= checked( get_option('he-activate-config'), 1, false );?>/>
+						<input id="he-activate-config" name="he-activate-config" type="checkbox" value="1" <?php echo checked( get_option('he-activate-config'), 1, false );?>/>
 						<label for="he-activate-config">
 							<h3>Customiser Wordpress</h3>
 							<p>Ajout d'un style et d'un script permettant la customisation du thème, personnalisation des options à afficher ou non dans l'administration de Wordpress</p>
@@ -58,7 +58,7 @@ function he_admin_page(){
 					</div>
 
 					<div class="he-admin-page-modules-item">
-						<input id="he-tinymce" name="he-tinymce" type="checkbox" value="1" <?= checked( get_option('he-tinymce'), 1, false );?>/>
+						<input id="he-tinymce" name="he-tinymce" type="checkbox" value="1" <?php echo checked( get_option('he-tinymce'), 1, false );?>/>
 						<label for="he-tinymce">
 							<div>
 								<h3>Customiser TinyMCE</h3>
@@ -75,7 +75,7 @@ function he_admin_page(){
 					</div>
 
 					<div class="he-admin-page-modules-item">
-						<input id="he-cookie" name="he-cookie" type="checkbox" value="1" <?= checked( get_option('he-cookie'), 1, false );?>/>
+						<input id="he-cookie" name="he-cookie" type="checkbox" value="1" <?php echo checked( get_option('he-cookie'), 1, false );?>/>
 						<label for="he-cookie">
 							<div>
 								<h3>Activation des cookie</h3>
