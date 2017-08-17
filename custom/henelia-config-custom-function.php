@@ -8,6 +8,7 @@
  * - Toolbar WP
  * - Nav menu & Metabox 
  * - Post type support & Role editor
+ * - Widgets Init
  * - Thumbnails
  * - Body Class
  * - Analytics
@@ -104,8 +105,12 @@ add_action( 'admin_menu', 'he_nav', 999 );
 		}
 
 		// Désactiver les widgets
-		if ( isset( $heCustomOptions['he-custom-widget'] ) ) {
+		if ( isset( $heCustomOptions['he-widget-activate'] ) ) {
 			unset($submenu['themes.php'][7]);
+		} else if ( isset( $heCustomOptions['he-widget-activate-user'] ) ) {
+			if ( !current_user_can('update_core') ) {
+				unset($submenu['themes.php'][7]);
+			}
 		}
 		
 	    // Désactiver les articles
@@ -369,6 +374,85 @@ add_action( 'admin_init', 'he_init' );
 	}
 
 /*=====  End of Post type support & Editor role  ======*/
+
+
+/*===================================
+=            Widget Init            =
+===================================*/
+/* Gestion des widgets */
+
+/* Si les widgets sont activés */
+// if ( isset( $heCustomOptions['he-widget-activate'] ) ) {
+add_action( 'widgets_init', 'he_widgets_init' );
+
+    function he_widgets_init() {
+
+    	global $heCustomOptions; // Récupération du tableau
+    	
+    	if ( isset( $heCustomOptions['he-widget-video'] ) ) {
+    		unregister_widget('WP_Widget_Media_Video');
+    	}
+
+    	if ( isset( $heCustomOptions['he-widget-audio'] ) ) {
+    		unregister_widget('WP_Widget_Media_Audio');
+    	}
+
+    	if ( isset( $heCustomOptions['he-widget-image'] ) ) {
+    		unregister_widget('WP_Widget_Media_Image');
+    	}
+
+    	if ( isset( $heCustomOptions['he-widget-calendar'] ) ) {
+        	unregister_widget('WP_Widget_Calendar');
+        }
+
+        if ( isset( $heCustomOptions['he-widget-pages'] ) ) {
+        	unregister_widget('WP_Widget_Pages');
+        }
+
+        if ( isset( $heCustomOptions['he-widget-calendar'] ) ) {
+        	unregister_widget('WP_Widget_Archives');
+        }
+
+        if ( isset( $heCustomOptions['he-widget-recent-posts'] ) ) {
+        	unregister_widget('WP_Widget_Recent_Posts');
+        }
+
+        if ( isset( $heCustomOptions['he-widget-recent-comments'] ) ) {
+			unregister_widget('WP_Widget_Recent_Comments');
+        }
+
+        if ( isset( $heCustomOptions['he-widget-menu'] ) ) {
+        	unregister_widget('WP_Nav_Menu_Widget');
+        }
+
+        if ( isset( $heCustomOptions['he-widget-cloud'] ) ) {
+        	unregister_widget('WP_Widget_Tag_Cloud');
+        }
+
+        if ( isset( $heCustomOptions['he-widget-search'] ) ) {
+        	unregister_widget('WP_Widget_Search');
+        }
+
+        if ( isset( $heCustomOptions['he-widget-cat'] ) ) {
+        	unregister_widget('WP_Widget_Categories');
+        }
+
+        if ( isset( $heCustomOptions['he-widget-rss'] ) ) {
+        	unregister_widget('WP_Widget_RSS');
+        }
+
+        if ( isset( $heCustomOptions['he-widget-meta'] ) ) {
+        	unregister_widget('WP_Widget_Meta');
+        }
+
+        if ( isset( $heCustomOptions['he-widget-text'] ) ) {
+        	unregister_widget('WP_Widget_Text');
+        }
+
+    } 
+// }
+/*=====  End of Widget Init  ======*/
+
 
 
 /*=================================

@@ -12,7 +12,24 @@ add_action('plugins_loaded', function() {
 			'he-custom-js'				=> '1',
 			'he-custom-customize'		=> '1',
 			'he-custom-comment'			=> '1',
-			'he-custom-widget'			=> '1',
+
+			'he-widget-activate'		=> '1',
+			'he-widget-activate-user'	=> '1',
+			'he-widget-video'			=> '1',
+			'he-widget-audio'			=> '1',
+			'he-widget-image'			=> '1',
+			'he-widget-calendar'		=> '1',
+			'he-widget-pages'			=> '1',
+			'he-widget-archives'		=> '1',
+			'he-widget-recent-posts'	=> '1',
+			'he-widget-recent-comments'	=> '1',
+			'he-widget-menu'			=> '1',
+			'he-widget-cloud'			=> '1',
+			'he-widget-search'			=> '1',
+			'he-widget-cat'				=> '1',
+			'he-widget-rss'				=> '1',
+			'he-widget-meta'			=> '1',
+			'he-widget-text'			=> '1',
 
 			'he-page-parent'			=> '1',
 			'he-page-thumbnail'			=> '1',
@@ -54,7 +71,7 @@ add_action('plugins_loaded', function() {
 			'he-dashboard-plugins'		=> '1',
 			'he-dashboard-activity'		=> '1',
 			'he-dashboard-blog'			=> '1',
-			'he-dashboard-secondary'		=> '1',
+			'he-dashboard-secondary'	=> '1',
 		);
 
 		add_option( 'he-custom-option', $optionsValues ,'', 'no');
@@ -97,11 +114,6 @@ add_action('plugins_loaded', function() {
 		                'type'      => 'checkbox',
 		                'label_for' => 'comment',
 		                'label'     => 'Désactiver intégralement les Commentaires'
-		            ),
-		            array( // FAIT
-		                'type'      => 'checkbox',
-		                'label_for' => 'widget',
-		                'label'     => 'Désactiver les widgets'
 		            )
 		        )
 		    ),
@@ -132,6 +144,101 @@ add_action('plugins_loaded', function() {
 		                'label_for' => 'recaptcha-secret',
 		                'label'     => 'reCAPTCHA Clé secrète',
 		                'css'		=> 'width:100%'
+		            )
+		        )
+		    ),
+		    array(
+		        'title'     => 'Widget',
+		        'id'        => 'custom-wp-widgets',
+		        'desc'      => 'Activation et customisation des widgets',
+		        'prefix'    => 'he-widget',
+		        'fields'    => array(
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'activate',
+		                'label'     => 'Désactiver les Widgets pour tous',
+		                'attr'		=> 'heading="true"'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'activate-user',
+		                'label'     => 'Désactiver les Widgets <br/><span class="alert">Sauf les admin</span>',
+		                'attr'		=> 'sublevel="true"'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'video',
+		                'label'     => 'Desactiver Widgets Vidéo'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'audio',
+		                'label'     => 'Desactiver Widgets Son'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'image',
+		                'label'     => 'Desactiver Widgets Image'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'calendar',
+		                'label'     => 'Desactiver Widgets Calendar'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'pages',
+		                'label'     => 'Desactiver Widgets Pages'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'archives',
+		                'label'     => 'Desactiver Widgets Archives'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'recent-posts',
+		                'label'     => 'Desactiver Widgets Posts récents'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'recent-comments',
+		                'label'     => 'Desactiver Widgets Commentaires récents'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'menu',
+		                'label'     => 'Desactiver Widgets menu'
+		            ),
+		             array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'cloud',
+		                'label'     => 'Desactiver Widgets Nuage de tags'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'search',
+		                'label'     => 'Desactiver Widgets Recherche'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'cat',
+		                'label'     => 'Desactiver Widgets Catégories'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'rss',
+		                'label'     => 'Desactiver Widgets RSS'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'meta',
+		                'label'     => 'Desactiver Widgets Meta'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
+		                'label_for' => 'text',
+		                'label'     => 'Desactiver Widgets Texte'
 		            )
 		        )
 		    ),
