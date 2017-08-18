@@ -10,22 +10,6 @@
 *
 **/
 
-
-/*=========================================
-=            Page de connexion            =
-=========================================*/
-
-.login h1 a {
-	background-image: url('../images/logo-login-320-150.png');
-	background-size: initial;
-	background-position: center top;
-	width:320px;
-	height:150px;
-}
-
-/*=====  End of Page de connexion  ======*/
-
-
 /*================================
 =            Adminbar            =
 ================================*/

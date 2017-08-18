@@ -66,6 +66,7 @@ if ( get_option('he-cookie') )  {
 ===================================*/
 
 add_action( 'admin_enqueue_scripts', 'he_load_assets' );
+
     function he_load_assets($hook) {
     	
     	global $heCustomOptions;
