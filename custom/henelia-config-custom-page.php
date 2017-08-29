@@ -353,6 +353,11 @@ add_action('plugins_loaded', function() {
 		            ),
 		            array(
 		                'type'      => 'checkbox',
+		                'label_for' => 'customfields',
+		                'label'     => 'Désactiver les custom fields'
+		            ),
+		            array(
+		                'type'      => 'checkbox',
 		                'label_for' => 'revisions',
 		                'label'     => 'Désactiver les révisions'
 		            ),
