@@ -12,6 +12,7 @@
  * - Thumbnails
  * - Body Class
  * - Analytics
+ * - Dashboard
  *
  */
 

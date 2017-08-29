@@ -28,6 +28,7 @@ Author: Henelia & Collectif Créatif
 /*----------  Gestion des Class  ----------*/
 /* Outils permettant la mise ne place rapide de dévelloppement */
 include 'class/class-add-custom-admin.php';                // Création de pages, field, ... dans l'admin
+include 'class/class-user-role.php';                // Gestion des users et droit
 
 /*----------  Gestion des customisations de l'admin  ----------*/
 
