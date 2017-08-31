@@ -3,10 +3,10 @@
 // Source : https://isabelcastillo.com/editor-role-manage-users-wordpress
 // S'assurer que les Editeurs ne puissent pas supprimer, modifier et créer des administrateurs
  
-class He_User_Role {
+class He_User_Role_Capability {
 
   // Ajout du filtre
-  function He_User_Role(){
+  function He_User_Role_Capability(){
     add_filter( 'editable_roles', array(&$this, 'editable_roles'));
     add_filter( 'map_meta_cap', array(&$this, 'map_meta_cap'),10,4);
   }
@@ -55,6 +55,6 @@ class He_User_Role {
  
 }
  
-$heUserRole = new He_User_Role();
+$heUserRole = new He_User_Role_Capability();
 
 ?>
