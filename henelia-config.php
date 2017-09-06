@@ -82,12 +82,12 @@ add_action( 'admin_enqueue_scripts', 'he_load_assets' );
 	    /*----------  Chargement des styles et scripts du module Custom  ----------*/
 
 	    // Scripts
-    	if ( $heCustomOptions['he-custom-js'] ) {
+	    if ( isset( $heCustomOptions['he-custom-js'] ) ) {
     		wp_enqueue_script( 'he-config-custom-scripts', plugin_dir_url( __FILE__ ).'custom/henelia-config-custom-script.js' );
     	}
 
 	    // CSS
-	    if ( $heCustomOptions['he-custom-css'] ) {
+	    if ( isset( $heCustomOptions['he-custom-css'] ) ) {
 	    	wp_enqueue_style( 'he-config-custom-css', plugin_dir_url( __FILE__ ).'custom/henelia-config-custom-style.css' );
 	    }
 

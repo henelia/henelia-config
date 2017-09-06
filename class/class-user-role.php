@@ -6,7 +6,7 @@
 class He_User_Role_Capability {
 
   // Ajout du filtre
-  function He_User_Role_Capability(){
+  public function __construct() {
     add_filter( 'editable_roles', array(&$this, 'editable_roles'));
     add_filter( 'map_meta_cap', array(&$this, 'map_meta_cap'),10,4);
   }
