@@ -8,6 +8,7 @@ add_action('plugins_loaded', function() {
 		$optionsValues = array(
 			'he-tuto-best-practice'		=> '1',
 			'he-tuto-seo'				=> '1',
+			'he-tuto-media'				=> '1',
 		);
 
 		add_option( 'he-tuto-admin-option', $optionsValues ,'', 'no');

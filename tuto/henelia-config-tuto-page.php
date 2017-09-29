@@ -44,22 +44,54 @@
 		<h2>Tutoriaux Wordpress</h2>
 		<ol class="he-list">
 			<li class="he-list-item"><a href="https://youtu.be/dxYnB8I-fJM" target="_blank" class="button button-primary"><span class="dashicons dashicons-video-alt3"></span></a><span>Se connecter à Wordpress</span></li>
-
-			<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des utilisateurs</span></li>
-
-			<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Widgets</span></li>
 			
-			<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Menus</span></li>
+			<?php 
+				if ( $heTutoOptions['he-tuto-user'] ) :
+			?>
+				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des utilisateurs</span></li>
+			<?php endif; ?>
 
-			<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Articles</span></li>
+			<?php 
+				if ( $heTutoOptions['he-tuto-widget'] ) :
+			?>
+				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Widgets</span></li>
+			<?php endif; ?>
 
-			<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Utiliser l'éditeur de texte</span></li>
+			<?php 
+				if ( $heTutoOptions['he-tuto-menu'] ) :
+			?>
+				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Menus</span></li>
+			<?php endif; ?>
 
-			<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Médias</span></li>
+			<?php 
+				if ( $heTutoOptions['he-tuto-post'] ) :
+			?>
+				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Articles</span></li>
+			<?php endif; ?>
 
-			<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Optimiser le référencement</span></li>
+			<?php 
+				if ( $heTutoOptions['he-tuto-editor'] ) :
+			?>
+				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Utiliser l'éditeur de texte</span></li>
+			<?php endif; ?>
 
-			<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Bonnes pratiques</span></li>
+			<?php 
+				if ( $heTutoOptions['he-tuto-media'] ) :
+			?>
+				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Médias</span></li>
+			<?php endif; ?>
+
+			<?php 
+				if ( $heTutoOptions['he-tuto-seo'] ) :
+			?>
+				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Optimiser le référencement</span></li>
+			<?php endif; ?>
+
+			<?php 
+				if ( $heTutoOptions['he-tuto-best-practice'] ) :
+			?>
+				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Bonnes pratiques</span></li>
+			<?php endif; ?>
 
 		</ol>
 		<br/>
