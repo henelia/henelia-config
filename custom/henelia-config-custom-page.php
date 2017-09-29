@@ -1,5 +1,21 @@
 <?php
 
+/**
+ *
+ * Functions lié à la création de la page de custom et des champs qui vont avec
+ *
+ * - CSS / JS (Load assets)
+ * - Toolbar WP
+ * - Nav menu & Metabox 
+ * - Post type support & Role editor
+ * - Widgets Init
+ * - Analytics
+ * - Thumbnails
+ * - Body Class
+ * - Dashboard
+ *
+ */
+
 add_action('plugins_loaded', function() { 
 
 	/*----------  Valeurs par défaut  ----------*/

@@ -1,5 +1,12 @@
 <?php
 
+/**
+*
+* Fonction permettant de charger dans les Assets (Footer / Header) Le message de Cookie
+* Valable pour les anciens wordpress, sur les nouveaux cette fonctionnalités est dans les Henelia WP Themes
+*
+**/
+
 add_action( 'wp_enqueue_scripts', 'cookie_assets');
 
 	function cookie_assets(){
@@ -20,5 +27,3 @@ add_action( 'wp_enqueue_scripts', 'cookie_assets');
 
 	    /*=====  End of Chargement assets  ======*/
 	}
-
-?>

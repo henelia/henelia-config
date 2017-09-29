@@ -1,5 +1,12 @@
 <?php
 
+/**
+*
+* * Construction de la page de personnalisation des Tutoriaux vidéos
+*
+*
+**/
+
 add_action('plugins_loaded', function() {
 
 	// si l'option n'existe pas

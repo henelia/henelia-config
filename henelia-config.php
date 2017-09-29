@@ -65,8 +65,7 @@ if ( get_option('he-tuto') )  {
 	$heTutoOptions = get_option('he-tuto-admin-option');	// Création du tableau avec les données du module du plugin
 
 	include 'tuto/henelia-config-tuto-page.php';		// Page des Tutoriaux
-	include 'tuto/henelia-config-tuto-admin.php';		// Page de choix des vidéos
-	include 'tuto/henelia-config-tuto-function.php';		// function associés à la gestion tinyMCE
+	include 'tuto/henelia-config-tuto-admin.php';		// Page de choix des vidéos pour les admins
 
 }
 

@@ -1,7 +1,13 @@
 <?php 
 
-// Source : https://isabelcastillo.com/editor-role-manage-users-wordpress
-// S'assurer que les Editeurs ne puissent pas supprimer, modifier et créer des administrateurs
+/**
+*
+* Class permettant la personnalisation des capacités editeurs
+* S'assurer que les Editeurs ne puissent pas supprimer, modifier et créer des administrateurs
+*
+* Source : https://isabelcastillo.com/editor-role-manage-users-wordpress
+*
+**/
  
 class He_User_Role_Capability {
 
@@ -56,5 +62,3 @@ class He_User_Role_Capability {
 }
  
 $heUserRole = new He_User_Role_Capability();
-
-?>

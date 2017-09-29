@@ -222,3 +222,31 @@
 
 /*=====  End of Tuto Page  ======*/
 
+
+/*=====================================
+=            Documentation            =
+=====================================*/
+
+.he-doc-block {
+	background-color: #fff;
+	margin-bottom: 30px;
+    padding: 30px;
+}
+
+.he-doc-block h4 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.he-doc-code {
+    background-color: #eaeaea;
+    padding: 10px;
+    margin: 10px 40px;
+    max-width: 768px;
+}
+.he-doc-code code {
+	background-color: #eaeaea;
+}
+/*=====  End of Documentation  ======*/

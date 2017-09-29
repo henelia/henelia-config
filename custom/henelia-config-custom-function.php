@@ -9,9 +9,9 @@
  * - Nav menu & Metabox 
  * - Post type support & Role editor
  * - Widgets Init
+ * - Analytics
  * - Thumbnails
  * - Body Class
- * - Analytics
  * - Dashboard
  *
  */
@@ -692,4 +692,3 @@ function he_welcome() {
 /*=====  End of Dashboard  ======*/
 
 
-?>
