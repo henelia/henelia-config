@@ -99,7 +99,8 @@
 =            Affichage pages plugins            =
 ===============================================*/
 
-.he-config_page_he-custom table.form-table, 
+.he-config_page_he-custom table.form-table,
+.he-config_page_he-tuto-admin table.form-table,
 .he-config_page_he-tinymce table.form-table
 {
 	background-color: #fff;
@@ -107,12 +108,14 @@
 	margin-top: 30px;
 }
 .he-config_page_he-custom .form-table tr, 
+.he-config_page_he-tuto-admin .form-table tr, 
 .he-config_page_he-tinymce .form-table tr
 {
 	border-bottom: 1px solid #e6e6e6;
 }
 
 .he-config_page_he-custom .form-table th, 
+.he-config_page_he-tuto-admin .form-table th, 
 .he-config_page_he-tinymce .form-table th
 {
     padding-left: 20px;
@@ -120,14 +123,17 @@
     width: 220px;
 }
 .he-config_page_he-custom .form-table td, 
+.he-config_page_he-tuto-admin .form-table td, 
 .he-config_page_he-tinymce .form-table td
 {
 	padding: 30px 10px;
 }
 
 .he-config_page_he-custom h2,
+.he-config_page_he-tuto-admin h2,
 .he-config_page_he-tinymce h2,
 .he-config_page_he-custom table.form-table + p.submit, 
+.he-config_page_he-tuto-admin table.form-table + p.submit, 
 .he-config_page_he-tinymce table.form-table + p.submit 
 {
     margin-top: 30px;
@@ -137,6 +143,7 @@
 }
 
 .he-config_page_he-custom input[type="text"], 
+.he-config_page_he-tuto-admin input[type="text"], 
 .he-config_page_he-tinymce input[type="text"]
 {
 	height: 35px;
@@ -152,7 +159,8 @@
 }
 
 /* Gestion des sous-niveau de formulaire (via js) */
-.he-config_page_he-custom .js-he-form-sublevel th {
+.he-config_page_he-custom .js-he-form-sublevel th,
+.he-config_page_he-tuto-admin .js-he-form-sublevel th  {
     padding-left: 60px;
 }
 
@@ -174,4 +182,43 @@
 /*=====  End of Affichage pages plugins  ======*/
 
 
+/*=================================
+=            Tuto Page            =
+=================================*/
+
+.he-tuto-title {
+	display: none;
+}
+
+.he-tuto-title-img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+.he-list {
+	margin-left: 40px;
+}
+.he-list-item {
+	margin-bottom: 20px;
+	color: #5b9dd9;
+}
+.he-list-item span {
+    font-size: 18px;
+    font-weight: 300;
+    color: #555d66;
+    margin-left: 20px;
+}
+.he-list-item span, .he-list-item a {
+	display: inline-block;
+	vertical-align: middle!important;
+}
+.he-list-item a span {
+    color: #fff;
+    font-size: 17px;
+    margin-right: 3px;
+    margin-left: 0;
+}
+
+/*=====  End of Tuto Page  ======*/
 

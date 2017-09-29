@@ -17,12 +17,18 @@ add_action( 'admin_menu', 'he_create_admin_page' );
 
 
 		add_submenu_page( 'henelia', 'Documentation', '[He] Doc', 'manage_options', 'henelia-doc', 'he_admin_page_doc' );
+
+		if ( get_option('he-tuto') )  {
+			// Creation de la page Tuto, si l'option est coché
+			add_menu_page( 'Henelia Tuto', '[He] Tutoriaux', 'manage_options', 'he-tuto', 'he_admin_page_tuto', 'dashicons-video-alt3', 80  );
+		}
 	}
 
 function he_admin_page_settings() {
 	register_setting( 'he-admin-page-group', 'he-activate-config' );
 	register_setting( 'he-admin-page-group', 'he-tinymce' );
 	register_setting( 'he-admin-page-group', 'he-cookie' );
+	register_setting( 'he-admin-page-group', 'he-tuto' );
 }
 
 function he_admin_page(){
@@ -70,6 +76,16 @@ function he_admin_page(){
 									<li>Gestion des blocs, titrage, ...</li>
 									<li>Options variées</li>
 								</ul>
+							</div>
+						</label>
+					</div>
+
+					<div class="he-admin-page-modules-item">
+						<input id="he-tuto" name="he-tuto" type="checkbox" value="1" <?php echo checked( get_option('he-tuto'), 1, false );?>/>
+						<label for="he-tuto">
+							<div>
+								<h3>Activation de la page Tutoriaux Vidéos</h3>
+								<p>Créer un lien dans le menu d'administration avec des liens vers les Tutoriaux Wordpress produits par Henelia</p>
 							</div>
 						</label>
 					</div>
