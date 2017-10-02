@@ -159,3 +159,22 @@
 { display: none!important; }
 
 /*=====  End of Media (Attachment)   ======*/
+
+
+
+/*=================================
+=            User page            =
+=================================*/
+
+/* Gestion des options dans la page de modification des utilisateurs */
+
+.user-rich-editing-wrap, /* Suppression de la ligne de formulaire Editeur visuel */
+.user-comment-shortcuts-wrap, /* Suppression de la ligne de formulaire raccourci clavier pour les commentaire */
+.show-admin-bar.user-admin-bar-front-wrap /* Suppression de la ligne de formulaire pour afficher ou non la barre d'outils wordpress coté front */
+{ 
+	display: none!important;
+}
+
+/*=====  End of User page  ======*/
+
+
