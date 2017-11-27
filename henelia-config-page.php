@@ -11,12 +11,12 @@ add_action( 'admin_menu', 'he_create_admin_page' );
 	function he_create_admin_page() {
 		
 		// Creation de la page
-		add_menu_page( 'Henelia Config', '[He] Config', 'manage_options', 'henelia', 'he_admin_page', 'dashicons-schedule', 80  );
+		add_menu_page( 'Henelia Config', '[He] Config', 'administrator', 'henelia', 'he_admin_page', 'dashicons-schedule', 80  );
 		// Enregistrement des options
 		add_action( 'admin_init', 'he_admin_page_settings' );
 
 
-		add_submenu_page( 'henelia', 'Documentation', '[He] Doc', 'manage_options', 'henelia-doc', 'he_admin_page_doc' );
+		add_submenu_page( 'henelia', 'Documentation', '[He] Doc', 'administrator', 'henelia-doc', 'he_admin_page_doc' );
 
 		if ( get_option('he-tuto') )  {
 			// Creation de la page Tuto, si l'option est coché (entrée de menu accessible aux utilisateurs qui peut editer un posts = Tous sauf subscriber)

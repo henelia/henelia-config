@@ -4,7 +4,7 @@
 Plugin Name: [He] Henelia Config
 Plugin URI: www.henelia.fr
 Description: Customisations admin & public 
-Version: 0.1.2
+Version: 0.1.3
 Author: Henelia & Collectif Créatif
 */
 
@@ -26,6 +26,9 @@ Author: Henelia & Collectif Créatif
  * Version :
  * 0.1.1 - Version originale
  * 0.1.2 - Personnalisation CSS edit/create users
+ * 0.1.3 - Gestion des Issets sur les les conditions d'affichage des tuto
+ *		 - Modification du tags Analytics
+ *		 - Non-affichage du plugin aux utlisateurs sauf admin 'manage_options' > 'administrator'
  *
  */
 

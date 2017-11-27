@@ -18,7 +18,7 @@
 		<!-- Si Vidéos Spécifiques -->
 		<?php
 		global $heTutoOptions; // Récupération du tableau
-		if ( $heTutoOptions['he-tuto-spe-url1'] || $heTutoOptions['he-tuto-spe-url2'] || $heTutoOptions['he-tuto-spe-url3'] ) : ?>
+		if ( isset( $heTutoOptions['he-tuto-spe-url1'] ) || isset( $heTutoOptions['he-tuto-spe-url2'] ) || isset( $heTutoOptions['he-tuto-spe-url3'] ) ) : ?>
 			<h2>Tutoriaux spécifiques</h2>
 			<ul class="he-list">
 				<!-- Si vidéo 1 -->
@@ -47,49 +47,49 @@
 			<li class="he-list-item"><a href="https://youtu.be/dxYnB8I-fJM" target="_blank" class="button button-primary"><span class="dashicons dashicons-video-alt3"></span></a><span>Se connecter à Wordpress</span></li>
 			
 			<?php 
-				if ( $heTutoOptions['he-tuto-user'] ) :
+				if ( isset( $heTutoOptions['he-tuto-user'] ) ) :
 			?>
 				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des utilisateurs</span></li>
 			<?php endif; ?>
 
 			<?php 
-				if ( $heTutoOptions['he-tuto-widget'] ) :
+				if ( isset( $heTutoOptions['he-tuto-widget'] ) ) :
 			?>
 				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Widgets</span></li>
 			<?php endif; ?>
 
 			<?php 
-				if ( $heTutoOptions['he-tuto-menu'] ) :
+				if ( isset( $heTutoOptions['he-tuto-menu'] ) ) :
 			?>
 				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Menus</span></li>
 			<?php endif; ?>
 
 			<?php 
-				if ( $heTutoOptions['he-tuto-post'] ) :
+				if ( isset( $heTutoOptions['he-tuto-post'] ) ) :
 			?>
 				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Articles</span></li>
 			<?php endif; ?>
 
 			<?php 
-				if ( $heTutoOptions['he-tuto-editor'] ) :
+				if ( isset( $heTutoOptions['he-tuto-editor'] ) ) :
 			?>
 				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Utiliser l'éditeur de texte</span></li>
 			<?php endif; ?>
 
 			<?php 
-				if ( $heTutoOptions['he-tuto-media'] ) :
+				if ( isset( $heTutoOptions['he-tuto-media'] ) ) :
 			?>
 				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Médias</span></li>
 			<?php endif; ?>
 
 			<?php 
-				if ( $heTutoOptions['he-tuto-seo'] ) :
+				if ( isset( $heTutoOptions['he-tuto-seo'] ) ) :
 			?>
 				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Optimiser le référencement</span></li>
 			<?php endif; ?>
 
 			<?php 
-				if ( $heTutoOptions['he-tuto-best-practice'] ) :
+				if ( isset( $heTutoOptions['he-tuto-best-practice'] ) ) :
 			?>
 				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Bonnes pratiques</span></li>
 			<?php endif; ?>

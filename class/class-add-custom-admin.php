@@ -56,7 +56,7 @@ class He_Add_Admin_Page {
 	    add_action( 'admin_menu', function() use( $title, $parent, $menuLabel, $slug, $position, $icon, $capability ) {
 
 	    	// accès à la page aux éditeurs ou que au administrateur
-	    	if ( $capability == 'admin' ) { $capability = 'manage_options'; }
+	    	if ( $capability == 'admin' ) { $capability = 'administrator'; }
 	    	else { $capability = 'edit_others_posts'; }
 
 	    	if ( '' == $parent ) {
