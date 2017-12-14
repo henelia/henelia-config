@@ -39,6 +39,18 @@
 				?>
 					<li class="he-list-item"><a href="<?php echo $heTutoOptions['he-tuto-spe-url3'] ?>" target="_blank" class="button button-primary"><span class="dashicons dashicons-video-alt3"></span></a><span><?php echo $heTutoOptions['he-tuto-spe-title3'] ?></span></li>
 				<?php endif; ?>
+				<!-- Si vidéo 4 -->
+				<?php 
+					if ( $heTutoOptions['he-tuto-spe-url4'] && $heTutoOptions['he-tuto-spe-title4'] ) :
+				?>
+					<li class="he-list-item"><a href="<?php echo $heTutoOptions['he-tuto-spe-url4'] ?>" target="_blank" class="button button-primary"><span class="dashicons dashicons-video-alt4"></span></a><span><?php echo $heTutoOptions['he-tuto-spe-title4'] ?></span></li>
+				<?php endif; ?>
+				<!-- Si vidéo 5 -->
+				<?php 
+					if ( $heTutoOptions['he-tuto-spe-url5'] && $heTutoOptions['he-tuto-spe-title5'] ) :
+				?>
+					<li class="he-list-item"><a href="<?php echo $heTutoOptions['he-tuto-spe-url5'] ?>" target="_blank" class="button button-primary"><span class="dashicons dashicons-video-alt5"></span></a><span><?php echo $heTutoOptions['he-tuto-spe-title5'] ?></span></li>
+				<?php endif; ?>
 			</ul>
 		<br/>	
 		<?php endif; ?>
@@ -49,7 +61,7 @@
 			<?php 
 				if ( isset( $heTutoOptions['he-tuto-user'] ) ) :
 			?>
-				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des utilisateurs</span></li>
+				<li class="he-list-item"><a href="https://youtu.be/cZFu1vqXV5o" target="_blank" class="button button-primary"><span class="dashicons dashicons-video-alt3"></span></a><span>Gestion des utilisateurs</span></li>
 			<?php endif; ?>
 
 			<?php 
@@ -61,19 +73,19 @@
 			<?php 
 				if ( isset( $heTutoOptions['he-tuto-menu'] ) ) :
 			?>
-				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Menus</span></li>
+				<li class="he-list-item"><a href="https://youtu.be/PLayps7fX3o" target="_blank" class="button button-primary"><span class="dashicons dashicons-video-alt3"></span></a><span>Gestion des Menus</span></li>
 			<?php endif; ?>
 
 			<?php 
 				if ( isset( $heTutoOptions['he-tuto-post'] ) ) :
 			?>
-				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Gestion des Articles</span></li>
+				<li class="he-list-item"><a href="https://youtu.be/LgmpfbMfaJY" target="_blank" class="button button-primary"><span class="dashicons dashicons-video-alt3"></span></a><span>Gestion des Articles</span></li>
 			<?php endif; ?>
 
 			<?php 
 				if ( isset( $heTutoOptions['he-tuto-editor'] ) ) :
 			?>
-				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Utiliser l'éditeur de texte</span></li>
+				<li class="he-list-item"><a href="https://youtu.be/uORsXSOhJXE" target="_blank" class="button button-primary"><span class="dashicons dashicons-video-alt3"></span></a><span>Utiliser l'éditeur de texte</span></li>
 			<?php endif; ?>
 
 			<?php 
@@ -88,19 +100,13 @@
 				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Optimiser le référencement</span></li>
 			<?php endif; ?>
 
-			<?php 
-				if ( isset( $heTutoOptions['he-tuto-best-practice'] ) ) :
-			?>
-				<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Bonnes pratiques</span></li>
-			<?php endif; ?>
-
 		</ol>
 		<br/>
-		<h2>Les astuces</h2>
+		<h2>Les astuces & Bonnes pratiques</h2>
 		<ul class="he-list">
+			<li class="he-list-item"><a href="" target="_blank" class="button button-primary"><span class="dashicons dashicons-format-aside"></span></a><span>Vider son cache</span></li>
+			<li class="he-list-item"><a href="" target="_blank" class="button button-primary"><span class="dashicons dashicons-format-aside"></span></a><span>Optimiser vos médias. Images, PDF, penser à la performance de votre site.</span></li>
 			<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Analyser vos statistiques Google Analytics</span></li>
-			<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Vider son cache</span></li>
-			<li class="he-list-item"><a href="" target="_blank" class="button button-disable">Bientôt</a><span>Optimiser ses images & PDF</span></li>
 		</ul>
 	</div>
 <?php } ?>

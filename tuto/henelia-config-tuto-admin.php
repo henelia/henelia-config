@@ -66,11 +66,6 @@ add_action('plugins_loaded', function() {
 		                'type'      => 'checkbox',
 		                'label_for' => 'seo',
 		                'label'     => 'Optimiser le référencement'
-		            ),
-		            array(	// FAIT
-		                'type'      => 'checkbox',
-		                'label_for' => 'best-practice',
-		                'label'     => 'Bonnes pratiques'
 		            )
 		        )
 		    ),
@@ -110,6 +105,28 @@ add_action('plugins_loaded', function() {
 		                'type'      => 'text',
 		                'label_for' => 'url3',
 		                'label'     => 'Tuto 3 : URL',
+		                'attr'		=> 'sublevel="true"'
+		            ),
+		            array( // FAIT
+		                'type'      => 'text',
+		                'label_for' => 'title4',
+		                'label'     => 'Tuto 4 : Titre'
+		            ),
+		            array( // FAIT
+		                'type'      => 'text',
+		                'label_for' => 'url4',
+		                'label'     => 'Tuto 4 : URL',
+		                'attr'		=> 'sublevel="true"'
+		            ),
+		            array( // FAIT
+		                'type'      => 'text',
+		                'label_for' => 'title5',
+		                'label'     => 'Tuto 5 : Titre'
+		            ),
+		            array( // FAIT
+		                'type'      => 'text',
+		                'label_for' => 'url5',
+		                'label'     => 'Tuto 5 : URL',
 		                'attr'		=> 'sublevel="true"'
 		            )
 		        )
